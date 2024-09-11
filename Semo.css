@@ -50,7 +50,6 @@ html {
     animation: twinkle 2s ease-in-out infinite;
 }
 
-/* تصميم رأس الصفحة */
 header {
     text-align: center;
     padding: 60px 20px;
@@ -76,7 +75,6 @@ header {
     border-radius: 50%;
 }
 
-/* تحريك النص */
 .animate-text {
     animation: fadeIn 3s ease-in-out;
 }
@@ -95,7 +93,6 @@ header p {
     font-size: 1.3em;
 }
 
-/* تصميم القسم الرئيسي */
 main {
     display: flex;
     justify-content: center;
@@ -152,7 +149,6 @@ main {
     margin-right: 5px;
 }
 
-/* زر تحميل الآن */
 .cta-button {
     display: inline-block;
     margin-top: 20px;
@@ -170,7 +166,6 @@ main {
     transform: translateY(-3px);
 }
 
-/* تصميم تذييل الصفحة */
 footer {
     background: rgba(0, 0, 0, 0.336);
     padding: 10px;
@@ -219,7 +214,7 @@ footer p {
     text-align: center;
     color: #ffffff;
     max-width: 400px;
-    width: 90%;  /* for better mobile support */
+    width: 90%; 
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
 }
