@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Cairo', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+    height: 115.5%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #2c003e, #6c1d6e, #e2e2e2);
+    z-index: -1;
+}
+
+.moon {
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+    width: 180px;
+    height: 180px;
+    background: #f5f3ce;
+    border-radius: 50%;
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.7);
+    animation: float 4s ease-in-out infinite;
+}
+
+.star {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 25px;
+    height: 25px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+/* تصميم رأس الصفحة */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    color: #fff;
+}
+
+.logo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* تحريك النص */
+.animate-text {
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+header p {
+    font-size: 1.3em;
+}
+
+/* تصميم القسم الرئيسي */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    padding: 20px;
+    text-align: center;
+}
+
+.intro {
+    background: rgba(255, 255, 255, 0.1);
+    max-width: 800px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.executor-image {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro p {
+    font-size: 1.1em;
+    color: #ddd;
+    margin-top: 20px;
+}
+
+.info-list {
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.info-list li {
+    font-size: 1.2em;
+}
+
+.info-list i {
+    margin-right: 5px;
+}
+
+/* زر تحميل الآن */
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #cb30a8;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background: #4f0e39;
+    transform: translateY(-3px);
+}
+
+/* تصميم تذييل الصفحة */
+footer {
+    background: rgba(0, 0, 0, 0.336);
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #cb30a8;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    max-width: 400px;
+    width: 90%;  /* for better mobile support */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.join-btn, .cancel-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 45%;
+    text-align: center;
+}
+
+.join-btn {
+    background: #cb30a8;
+    color: #fff;
+}
+
+.join-btn:hover {
+    background: #cb30a8;
+}
+
+.cancel-btn {
+    font-family: 'Cairo', sans-serif;
+    background: #cb30a8;
+    color: #fff;
+}
+
+.cancel-btn:hover {
+    background: #4f0e39;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px; 
+}
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cb30a8;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4f0e39;
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(255, 255, 255, 0);
+}
+
+@media (max-width: 768px) {
+    body {
+        height: 107%;
+    }
+    header {
+        padding: 40px 10px;
+    }
+    
+    .logo-container {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .logo {
+        width: 100%;
+        height: 100%;
+    }
+    
+    header h1 {
+        font-size: 2.5em;
+    }
+    
+    header p {
+        font-size: 1em;
+    }
+    .intro {
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    .intro h2 {
+        font-size: 2em;
+    }
+    
+    .executor-image {
+        width: 90%;
+        max-width: 100%;
+    }
+    
+    .intro p {
+        font-size: 1em;
+    }
+    
+    .info-list {
+        flex-direction: column;
+        align-items: center;
+        font-size: 1em;
+    }
+    
+    .info-list li {
+        margin: 10px 0;
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1em;
+    }
+    footer {
+        padding: 5px;
+    }
+    
+    footer p {
+        font-size: 0.9em;
+    }
+    
+    .social-links a {
+        font-size: 1.2em;
+        margin: 0 5px;
+    }
+    .modal-content {
+        width: 90%;
+    }
+    .join-btn, .cancel-btn {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+}
+@media (max-width: 768px) {
+    .moon {
+        bottom: 10%;
+        right: 10%;
+        width: 120px;
+        height: 120px;
+    }
+    .star {
+        top: 10%;
+        left: 10%;
+        width: 15px;
+        height: 15px;
+    }
+}
