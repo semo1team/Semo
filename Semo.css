@@ -9,8 +9,8 @@ body, html {
     color: #fff;
     overflow-x: hidden;
     position: relative;
-    height: 115.5%;
 }
+
 
 html {
     scroll-behavior: smooth;
@@ -50,6 +50,7 @@ html {
     animation: twinkle 2s ease-in-out infinite;
 }
 
+/* تصميم رأس الصفحة */
 header {
     text-align: center;
     padding: 60px 20px;
@@ -75,6 +76,7 @@ header {
     border-radius: 50%;
 }
 
+/* تحريك النص */
 .animate-text {
     animation: fadeIn 3s ease-in-out;
 }
@@ -93,6 +95,7 @@ header p {
     font-size: 1.3em;
 }
 
+/* تصميم القسم الرئيسي */
 main {
     display: flex;
     justify-content: center;
@@ -149,6 +152,7 @@ main {
     margin-right: 5px;
 }
 
+/* زر تحميل الآن */
 .cta-button {
     display: inline-block;
     margin-top: 20px;
@@ -166,6 +170,7 @@ main {
     transform: translateY(-3px);
 }
 
+/* تصميم تذييل الصفحة */
 footer {
     background: rgba(0, 0, 0, 0.336);
     padding: 10px;
@@ -214,7 +219,7 @@ footer p {
     text-align: center;
     color: #ffffff;
     max-width: 400px;
-    width: 90%; 
+    width: 100%;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
 }
@@ -277,9 +282,6 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    body {
-        height: 107%;
-    }
     header {
         padding: 40px 10px;
     }
@@ -303,6 +305,7 @@ footer p {
     }
     .intro {
         padding: 20px;
+        perspective: 1000px;
         border-radius: 10px;
     }
     
@@ -311,10 +314,24 @@ footer p {
     }
     
     .executor-image {
-        width: 90%;
-        max-width: 100%;
+        width: 80%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 10px;
+        margin-top: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
     }
     
+    .executor-image.hover {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); 
+    }
+    
+    
+    
+
+
     .intro p {
         font-size: 1em;
     }
